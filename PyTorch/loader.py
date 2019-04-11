@@ -1,3 +1,4 @@
+## loader.py
 import numpy as np 
 import torch
 import string
@@ -24,7 +25,7 @@ def load_data(dataset):
 
 			Xtrain.append(sentence)
 			trainlab.append(label)
-
+			
 		ytrain = torch.from_numpy(np.asarray(trainlab,dtype='int32'))
 
 

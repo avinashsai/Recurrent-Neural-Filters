@@ -1,3 +1,4 @@
+### convert.py
 import numpy as np
 import collections
 from collections import Counter
@@ -82,3 +83,17 @@ def get_indices(Xtrain,Xval,Xtest,vocab,maxlen):
 
 
 	return trainind,valind,testind
+	
+	
+def get_loaders(Xtrain,Xval,Xtest,ytrain,yval,ytest,batchsize):
+    
+	trainarray = torch.utils.data.TensorDataset(Xtrain,ytrain)
+	trainloader = torch.utils.data.DataLoader(trainarray,batchsize)
+	
+	valarray = torch.utils.data.TensorDataset(Xval,yval)
+	valloader = torch.utils.data.DataLoader(valarray,batchsize)
+	
+	testarray = torch.utils.data.TensorDataset(Xtest,ytest)
+	testloader = torch.utils.data.DataLoader(testarray,batchsize)
+	
+	return trainloader,valloader,testloader
