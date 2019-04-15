@@ -22,4 +22,17 @@ This is the code for the paper Convolutional Neural Networks with Recurrent Neur
  
  ```
  
+ # How to run (Keras)
+ 
+ Download glove 840B https://nlp.stanford.edu/projects/glove/ word vectors and mention corresponding path in main.py
+ 
+ ```
+ git clone https://github.com/avinashsai/Recurrent-Neural-Filters.git
+ 
+ cd keras
+ 
+ python main.py <dataset> (sst or sst2)
+ 
+ ```
+ 
  The paper is experimented on two datasets SST-1 and SST-2
